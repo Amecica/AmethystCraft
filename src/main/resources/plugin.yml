@@ -3,5 +3,19 @@ version: '1.0'
 main: hu.jgj52.amethystCraft.Main
 api-version: '1.21'
 authors: [ JGJ52, Ametiszt, Polokalap ]
+prefix: ">_<"
 commands:
-  test: {}
+  test:
+    description: "Test command, ignore it."
+  duel:
+    description: "Send a duel to a player using this command."
+permissions:
+  ametiszt.admin:
+    default: op
+    description: "Admin permission for AmetisztCraft plugin"
+  ametiszt.banned:
+    default: false
+    description: "Banned player permission for AmetisztCraft plugin"
+  ametiszt.plus:
+    default: op
+    description: "Plus rank permission for AmetisztCraft plugin"

@@ -1,18 +1,16 @@
 package hu.jgj52.amethystCraft.Duel;
 
 import hu.jgj52.amethystCraft.Commands.DuelCommand;
+import hu.jgj52.amethystCraft.Utils.NewConfig;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.title.Title;
-import net.kyori.adventure.title.TitlePart;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
-import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 
 import java.time.Duration;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -31,14 +29,13 @@ public class DuelManager {
         Duel duel = new Duel(player1, player2);
         duels.add(duel);
 
-
     }
 
     public void sendDuelRequest(Player player1, Player player2){
         DuelRequest duelRequest = new DuelRequest(player1, player2);
         duelRequests.add(duelRequest);
-        player1.sendMessage("§7Duel request sent!");
-        player2.sendMessage(player1 + "§7 has sent you a duel request!");
+        player1.sendMessage(NewConfig.getString("player.duel.sent").replace("%player%", player2.getName()));
+        player2.sendMessage(NewConfig.getString("player.duel.receive").replace("%player%", player1.getName()));
     }
 
     public Duel getDuel(Player player){
@@ -48,13 +45,13 @@ public class DuelManager {
 
 
     public static void countdown(Player player){
-        int maxSeconds = plugin.getConfig().getInt("countdown", 5);
-        TextColor color = TextColor.fromHexString(plugin.getConfig().getString("color", "dea431"));
+        int maxSeconds = plugin.getConfig().getInt("settings.countdown", 5);
+        TextColor color = TextColor.fromHexString(plugin.getConfig().getString("settings.color", "dea431"));
         int second = maxSeconds;
         int ticks = 0;
         for (int i = 0; i < maxSeconds+1; i++){
             boolean isLastSecond = second == 0;
-            Component titleComponent = isLastSecond ? Component.text("FIGHT!").color(color) : Component.text(String.valueOf(second)).color(color);
+            Component titleComponent = isLastSecond ? Component.text(NewConfig.getString("player.duel.start_title")).color(color) : Component.text(String.valueOf(second)).color(color);
             Bukkit.getScheduler().runTaskLater(plugin, () -> {
 
                 Title title = Title.title(titleComponent, Component.empty(), Title.Times.times(

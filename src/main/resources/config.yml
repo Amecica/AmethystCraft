@@ -1,6 +1,18 @@
-## CONFIG.YML
+PREFIX: "&x&9&4&4&7&F&F&lA&x&8&E&4&E&F&F&lm&x&8&8&5&5&F&F&le&x&8&2&5&C&F&F&lt&x&7&C&6&2&F&F&li&x&7&6&6&9&F&F&ls&x&7&0&7&0&F&F&lz&x&6&9&7&7&F&F&lt&x&6&3&7&E&F&F&lC&x&5&D&8&5&F&F&lr&x&5&7&8&B&F&F&la&x&5&1&9&2&F&F&lf&x&4&B&9&9&F&F&lt &8>&f"
 
-color: "dea431" # HEX
+console:
+  startup: "Plugin has started!"
+  shutdown: "Plugin shut down!"
+  player: "You *MUST* be a player to run this command!"
 
-# DUEL
-countdown: 5 # seconds
+settings:
+  color: "dea431" # HEX color code
+  countdown: 5 # Measured in seconds. 1 second is 20 ticks so do `config.getInt("settings.countdown")` * 20 to get it in ticks.
+
+player:
+  args: "ẞprefix Missing args! &7%usage%"
+  offline: "ẞprefix &8%player% &7is offline!"
+  duel:
+    receive: "ẞprefix &e%player% &fhas sent you a duel request!"
+    sent: "ẞprefix Duel request sent to &e%player%"
+    start_title: "FIGHT!"
