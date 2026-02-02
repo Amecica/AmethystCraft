@@ -1,6 +1,6 @@
-authors:
-  - JGJ52
-  - Ametiszt
+## CONFIG.YML
+
+color: "dea431" # HEX
 
 # DUEL
 countdown: 5 # seconds
