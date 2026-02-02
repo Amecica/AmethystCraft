@@ -1,0 +1,5 @@
+name: AmethystCraft
+version: '1.0'
+main: hu.jgj52.amethystCraft.AmethystCraft
+api-version: '1.21'
+authors: [ JGJ52 ]
