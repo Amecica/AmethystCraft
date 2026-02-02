@@ -18,14 +18,14 @@ public final class AmethystCraft extends JavaPlugin {
         // Plugin startup logic
         getConfig().options().copyDefaults(true);
         saveConfig();
-        getKitsConfig().options().copyDefaults(true);
-        saveKitsConfig();
 
         getCommand("test").setExecutor(new TestCommand());
 
         plugin = this;
         kitFile = new File(plugin.getDataFolder(), "kits.yml");
         kitsConfig = YamlConfiguration.loadConfiguration(kitFile);
+        getKitsConfig().options().copyDefaults(true);
+        saveKitsConfig();
     }
 
     public FileConfiguration getKitsConfig() {
