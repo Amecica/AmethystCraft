@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static hu.jgj52.amethystCraft.AmethystCraft.plugin;
+import static hu.jgj52.amethystCraft.Main.plugin;
 
 public class Kit {
     private static final Map<String, Kit> kits = new HashMap<>();

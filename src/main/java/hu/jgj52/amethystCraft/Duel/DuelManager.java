@@ -1,6 +1,5 @@
 package hu.jgj52.amethystCraft.Duel;
 
-import hu.jgj52.amethystCraft.AmethystCraft;
 import hu.jgj52.amethystCraft.Commands.DuelCommand;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
@@ -17,7 +16,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-import static hu.jgj52.amethystCraft.AmethystCraft.plugin;
+import static hu.jgj52.amethystCraft.Main.plugin;
 
 public class DuelManager {
 

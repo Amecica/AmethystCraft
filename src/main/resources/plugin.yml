@@ -1,7 +1,7 @@
 name: AmethystCraft
 version: '1.0'
-main: hu.jgj52.amethystCraft.AmethystCraft
+main: hu.jgj52.amethystCraft.Main
 api-version: '1.21'
-authors: [ JGJ52, Ametiszt ]
+authors: [ JGJ52, Ametiszt, Polokalap ]
 commands:
   test: {}

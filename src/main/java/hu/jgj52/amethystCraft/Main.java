@@ -7,9 +7,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 
-public final class AmethystCraft extends JavaPlugin {
+public final class Main extends JavaPlugin {
 
-    public static AmethystCraft plugin;
+    public static Main plugin;
     private File kitFile;
     private FileConfiguration kitsConfig;
 
