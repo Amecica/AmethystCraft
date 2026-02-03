@@ -16,7 +16,7 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        getLogger().info(kitsConfig.getString("console.startup"));
+        getLogger().info(getConfig().getString("console.startup"));
 
         // Plugin startup logic
         getConfig().options().copyDefaults(true);
